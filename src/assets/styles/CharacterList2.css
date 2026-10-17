@@ -1,0 +1,94 @@
+
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background: #f4f4f4;
+}
+
+/* Contenedor principal */
+.app {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+/* Título */
+.head {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #222;
+}
+
+/* Exactamente dos columnas */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0;
+}
+
+/* Tarjetas */
+.card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  text-align: center;
+  min-width: 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+/* Imágenes */
+.card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Nombre del personaje */
+.card h2 {
+  font-size: 1.2rem;
+  margin: 0.8rem 0 0.4rem;
+  color: #222;
+}
+
+/* Información */
+.card p {
+  margin: 0.4rem 0 1rem;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* Paginación */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.pagination button {
+  padding: 0.7rem 1.2rem;
+  border: none;
+  border-radius: 8px;
+  background: #2563eb;
+  color: white;
+  cursor: pointer;
+}
+
+.pagination button:hover:not(:disabled) {
+  background: #1d4ed8;
+}
+
+.pagination button:disabled {
+  background: #aaa;
+  cursor: not-allowed;
+}
