@@ -5,10 +5,16 @@ import CharacterList from "./assets/components/CharacterList2";
 import Pagination from "./assets/components/Paginacion";
 import FilterBar from "./assets/components/BarraFiltros";
 import "./assets/styles/CharacterList2.css";
+import { useRegistroClicks } from "../src/assets/hooks/useLocalStorage";
 
 function App() {
   const [page, setPage] = useState(1);
   const [tipoActivo, setTipoActivo] = useState("Todos");
+  const {
+  //historial,
+  registrarClick,
+  // limpiarHistorial,
+} = useRegistroClicks();
 
   // Obtener los personajes desde la API
   const {
@@ -31,7 +37,7 @@ function App() {
   );
 
   return (
-    <main className="app">
+    <main className="app" onClickCapture={registrarClick}>
       <h1 className="head">Rick and Morty</h1>
 
       <FilterBar
